@@ -1,0 +1,209 @@
+:root {
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-duration: 250ms;
+  background-image: linear-gradient(
+    45deg,
+    rgba(215, 196, 215, 0.122) 0%,
+    rgba(235, 210, 182, 0.117) 35%,
+    rgba(133, 163, 183, 0.122) 100%,
+    transparent 25%
+  ),
+  linear-gradient(
+    -45deg,
+    rgba(215, 196, 215, 0.122) 0%,
+    rgba(235, 210, 182, 0.117) 35%,
+    rgba(133, 163, 183, 0.122) 100%,
+    transparent 25%
+  ),
+  linear-gradient(
+    45deg,
+    transparent 75%,
+    rgba(215, 196, 215, 0.122) 0%,
+    rgba(235, 210, 182, 0.117) 35%,
+    rgba(133, 163, 183, 0.122) 100%,
+    transparent 25%
+  ),
+  linear-gradient(
+    -45deg,
+    transparent 75%,
+    rgba(62, 1, 64, 0.12230829831932777) 0%,
+    rgba(121, 68, 9, 0.11670605742296913) 35%,
+    rgba(0, 134, 223, 0.12230829831932777) 100%
+  );
+}
+
+.photo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-card {
+  background-color: ghostwhite;
+  border: 3px solid #ddd;
+  padding: 10px;
+  width: 300px;
+  height: 250px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+.photo-card__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform var(--animation-duration) var(--timing-function);
+}
+
+.photo__link {
+  display: block;
+  text-decoration: none;
+  height: 100%;
+}
+
+.photo-card img:hover,
+.photo-card img:focus {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(
+    180deg,
+    rgb(246, 246, 241) 0%,
+    rgb(241, 175, 94) 56%,
+    rgb(32, 90, 123) 100%
+  );
+  padding: 5px 10px;
+}
+
+.info:hover,
+.info:focus {
+  background: linear-gradient(
+    180deg,
+    rgb(246, 246, 241) 0%,
+    rgb(237, 213, 184) 56%,
+    rgb(183, 214, 231) 100%
+  );
+}
+
+.info-item {
+  text-align: center;
+}
+
+.info-item b {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-family: 'Bungee Hairline', cursive;
+}
+
+.likes,
+.views,
+.comments,
+downloads {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 5px;
+  font-family: 'Bungee Hairline', cursive;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    180deg,
+    rgb(246, 246, 241) 0%,
+    rgb(241, 175, 94) 56%,
+    rgb(32, 90, 123) 100%
+  );
+  background-repeat: no-repeat;
+  width: 100vw;
+  padding: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+input, .submit-btn {
+  font-family: 'Bungee Hairline';
+  font-weight: 600;
+  border-radius: 5px;
+  border: rgb(32, 90, 123) 1px solid;
+  box-shadow: rgb(32, 90, 123) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  padding: 2px;
+  margin-left: 5px;
+  margin-right: 5px;
+  max-width: 200px;
+  width: 150px;
+  height: 45px;
+  color: rgb(86, 132, 158);
+}
+
+input {
+  font-size: 18px;
+}
+
+.submit-btn, .load-more, .up-button {
+  font-size: 24px;
+  max-width: 200px;
+  width: 100px;
+  height: 50px;
+  background: linear-gradient(
+    180deg,
+    rgb(246, 246, 241) 0%,
+    rgb(237, 213, 184) 56%,
+    rgb(183, 214, 231) 100%
+  );
+  color: rgb(49, 125, 168);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: rgba(255, 255, 255, 0.161) 1px solid;
+  box-shadow: rgb(216, 225, 233) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  padding: 8px;
+  background-color: whitesmoke;
+}
+
+.load-more, .up-button {
+  color: rgb(49, 125, 168);
+  width: 150px;
+  height: 50px;
+  font-size: 17px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  float: right;
+}
+
+.load-more:hover,
+.load-more:focus,
+.up-button:hover,
+.up-button:focus {
+  color: rgb(33, 87, 152);
+  background-image: linear-gradient(
+    180deg,
+    rgb(246, 246, 241) 0%,
+    rgb(241, 175, 94) 56%,
+    rgb(32, 90, 123) 100%
+  );
+}
+
+.hidden {
+  display: none;
+}
